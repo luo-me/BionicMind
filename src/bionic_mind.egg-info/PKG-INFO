@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: bionic-mind
+Version: 1.0.0
+Summary: 仿生意识系统 - 基于动力学吸引子的AI意识框架
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: chromadb>=0.4.22
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: openai>=1.12.0
+Requires-Dist: aiohttp>=3.9.0
+Requires-Dist: pydantic>=2.5.0
+Requires-Dist: pydantic-settings>=2.1.0
+Requires-Dist: loguru>=0.7.2
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: gradio>=4.0.0
+Requires-Dist: networkx>=3.2
+Provides-Extra: local
+Requires-Dist: ollama>=0.1.6; extra == "local"
+Requires-Dist: sentence-transformers>=2.3.0; extra == "local"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23.0; extra == "dev"
+Requires-Dist: ruff>=0.2.0; extra == "dev"

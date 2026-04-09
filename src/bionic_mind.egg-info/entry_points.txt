@@ -1,0 +1,2 @@
+[console_scripts]
+bionic-mind = bionic_mind.ui.cli:main

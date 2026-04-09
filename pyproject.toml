@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bionic-mind"
+version = "1.0.0"
+description = "仿生意识系统 - 基于动力学吸引子的AI意识框架"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "chromadb>=0.4.22",
+    "numpy>=1.24.0",
+    "openai>=1.12.0",
+    "aiohttp>=3.9.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "loguru>=0.7.2",
+    "pyyaml>=6.0.1",
+    "gradio>=4.0.0",
+    "networkx>=3.2",
+]
+
+[project.optional-dependencies]
+local = [
+    "ollama>=0.1.6",
+    "sentence-transformers>=2.3.0",
+]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.2.0",
+]
+
+[project.scripts]
+bionic-mind = "bionic_mind.ui.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

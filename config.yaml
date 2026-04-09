@@ -1,0 +1,44 @@
+llm:
+  provider: "openai"          # openai | ollama
+  model: ""
+  api_key: ""
+  base_url: ""
+  temperature: 0.7
+  max_tokens: 2048
+
+memory:
+  persist_dir: "./memory_db"
+  embedding_model: "text-embedding-3-small"   # openai | bge-small-zh
+  decay_lambda: 0.01          # 时间衰减速率 (每小时)
+  working_memory_turns: 30     # 工作记忆保留轮数
+  priority_weights:
+    semantic_similarity: 0.20
+    time_decay: 0.25
+    emotional_arousal: 0.15
+    call_frequency: 0.10
+    connection_density: 0.05
+    emotional_resonance: 0.10
+    abstraction: 0.05
+    recency_boost: 0.10
+
+emotion:
+  weights:
+    prediction_error: -0.30
+    goal_progress: 0.20
+    consistency: 0.20
+    social_feedback: 0.20
+    novelty: 0.10
+  arousal_weights:
+    prediction_error: 0.30
+    goal_progress_rate: 0.20
+    valence_magnitude: 0.20
+    novelty: 0.30
+
+drives:
+  curiosity_baseline: 0.3
+  social_feedback_timeout_hours: 24
+  spontaneous_action_threshold: 0.7
+
+system:
+  log_level: "INFO"
+  cycle_interval_ms: 100
